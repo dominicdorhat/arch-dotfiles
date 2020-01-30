@@ -1,0 +1,21 @@
+# ~/.xprofile
+# read by lightDM via /etc/lightdm/Xsession
+
+# i3-gaps setup
+if [[ $XDG_SESSION_DESKTOP = i3 ]]; then	
+	~/.fehbg &
+	~/scripts/input-devices/toggle-touchpad.sh &
+	xbindkeys
+
+	# place all commands/scripts before execution of the wm
+	exec i3
+fi 
+
+# KDE startup
+if [[ $XDG_SESSION_DESKTOP = plasma ]]; then
+	~/scripts/input-devices/toggle-touchpad.sh &
+	export QT_PLUGIN_PATH="/usr/lib/qt/plugins"
+	exec startkde 
+fi 
+
+                                                  

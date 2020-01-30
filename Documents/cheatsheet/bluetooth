@@ -1,0 +1,16 @@
+# Bluetooth
+
+
+### Start `bluetooth.service`
+`sudo systemctl start bluetooth.service`
+
+### Connect via bluetoothctl
+```bash
+bluetoothctl
+power on
+pair <MAC address> 
+exit
+```
+
+## Logitech X50 MAC address
+`88:C6:26:6F:9B:6F`
